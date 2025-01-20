@@ -53,7 +53,33 @@ const Navbar = () => {
       AudioElemRef.current.pause();
     }
   }, [isAudioPlaying])
+
+  useEffect(() => {
+    const handleUserInteraction = () => {
+      setisIndicatorActive(true);
+      setisAudioPlaying(true);
   
+      // Remove listeners after interaction
+      window.removeEventListener("click", handleUserInteraction);
+      window.removeEventListener("keydown", handleUserInteraction);
+      window.removeEventListener("scroll", handleUserInteraction);
+    };
+  
+    // Add listeners for various interaction types
+    window.addEventListener("click", handleUserInteraction);
+    window.addEventListener("keydown", handleUserInteraction);
+    window.addEventListener("scroll", handleUserInteraction);
+  
+    // Cleanup listeners on unmount
+    return () => {
+      window.removeEventListener("click", handleUserInteraction);
+      window.removeEventListener("keydown", handleUserInteraction);
+      window.removeEventListener("scroll", handleUserInteraction);
+    };
+  }, []);
+  
+  
+
   return (
     <div ref={navContainerRef} className='fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6'>
       <header className='absolute top-1/2 w-full -translate-y-1/2'>
