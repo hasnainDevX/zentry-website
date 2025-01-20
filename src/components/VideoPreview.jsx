@@ -19,8 +19,8 @@ export const VideoPreview = ({ children }) => {
     const xOffset = clientX - (rect.left + rect.width / 2); // Calculate X offset
     const yOffset = clientY - (rect.top + rect.height / 2); // Calculate Y offset
 
-    console.log(xOffset)
-    console.log(yOffset)
+    // console.log(xOffset)
+    // console.log(yOffset)
 
     if (isHovering) {
       // Move the container slightly in the direction of the cursor

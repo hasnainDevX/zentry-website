@@ -271,3 +271,19 @@ body {
     opacity: 0.8;
   }
 }
+
+.c-button:hover .cont{
+  transform: translateY(-16px);
+}
+.c-button:hover{
+  /* border-radius: 5px; */
+  transform:rotate3d(12deg, 40deg, 44deg);
+}
+.c-button {
+  display: inline-block; /* Ensures proper hover behavior */
+}
+
+.cont {
+  transform: translateY(0); /* Initial position */
+  transition: all ease-in-out 0.5s; /* Smooth transition */
+}
