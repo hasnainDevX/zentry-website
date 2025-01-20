@@ -1,0 +1,13 @@
+ // 0 % 4 = 0 + 1 => 1
+  // " 0 modulus 4 nhi hoskta to jisse kra ha vohi ajaiga i.e : 4 "
+  //  same these two
+  // 1 % 4 = 1 + 1 => 2
+  // 2 % 4 = 2 + 1 => 3
+  // 1 se 4 ko kra to 1 hi ajaiga or 2 se krenge to 2 hi ajiaga kuon k ho hi nhi skta jb tk number 4 se greater nhi hojata
+
+  // 0 % 4 = 0 + 1 => 1
+  // 1 % 4 = 1 + 1 => 2
+  // 2 % 4 = 2 + 1 => 3
+  // 3 % 4 = 3 + 1 => 4
+  // 4 % 4 = 0 + 1 => 1
+  // 5 % 4 = 1 + 1 => 2
